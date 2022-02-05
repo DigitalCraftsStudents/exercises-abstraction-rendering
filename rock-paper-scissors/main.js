@@ -20,10 +20,17 @@ function computerPick() {
     // random choose an option.
     // Math.random will give a number between 0 and 1 as a float. if multiplied by 2
     // this number will be between 0 and 2. and I parse as int to remove any decimals.
-    let randomNumber = parseInt(Math.random() * 2);
+    let randomNumber = Math.random();
 
     // change selection on view.
-    rockPaperScissors.computer = options[randomNumber];
+    if (randomNumber < 0.33) {
+        rockPaperScissors.computer = options[0];
+    } else if (randomNumber < 0.67) {
+        rockPaperScissors.computer = options[1];
+    } else {
+        rockPaperScissors.computer = options[2];
+    }
+
 
     return options[randomNumber];
 }
