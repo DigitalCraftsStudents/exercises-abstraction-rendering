@@ -1,13 +1,13 @@
 var content = document.getElementById('content');
 
-var board = [
+var initialBoard = [
     ["-", "-", "-"], // 0
     ["-", "-", "-"], // 1
     ["-", "-", "-"] // 2
 ];
 
 var ticTacToe = {
-    board: board,
+    board: initialBoard,
     currentPlayer: "X"
 }
 
